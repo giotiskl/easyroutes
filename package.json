@@ -4,6 +4,9 @@
   "description": "Effortless management of named routes for JavaScript applications",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --progress --inline --hot",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
     "test": "yarn run test"
   },
   "keywords": [
@@ -21,14 +24,19 @@
   "author": "Yiotis Kaltsikis",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
     "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.1.0",
     "webpack": "^4.10.2",
-    "webpack-dev-server": "^3.1.4",
-    "babel-core": "^6.26.3"
-  }
+    "webpack-cli": "^3.0.1",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {}
 }
