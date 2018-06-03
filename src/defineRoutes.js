@@ -1,5 +1,13 @@
 import { checkRouteExists } from './utils';
 
+/**
+ * Helper function that merge new routes into an easyroutes instance.
+ *
+ * @export
+ * @param {object} routesMap - map of routes
+ * @param {object} routesObject - new route definitions
+ * @returns {object} new merged object containing all routes
+ */
 export default function defineRoutes(routesMap, routesObject) {
   const routes = Object.assign({}, routesMap);
 

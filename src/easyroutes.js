@@ -2,6 +2,13 @@ import defineRoutes from './defineRoutes';
 import getRoute from './getRoute';
 import { buildRoute, buildRouteWithOptions } from './buildRoute';
 
+/**
+ * Core function for the easyroutes package.
+ * Depending on the combination of arguments, will invoke different helpers.
+ *
+ * @param {*} args
+ * @returns {object|string} routes map or interpolated route
+ */
 function easyRoutes(...args) {
   if (args.length === 0) {
     // 0 arguments - return routes map
@@ -31,6 +38,13 @@ function easyRoutes(...args) {
   throw new Error('easyroutes: Invalid combination of arguments.');
 }
 
+/**
+ * Public interface of easyroutes package.
+ * The class that allows the user to generate an easyroutes instance.
+ *
+ * @export
+ * @class EasyRoutes
+ */
 export default class EasyRoutes {
   constructor(routes) {
     const router = easyRoutes.bind(this);

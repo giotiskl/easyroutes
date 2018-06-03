@@ -1,6 +1,15 @@
 import { checkType, checkParamsForMissingValues, paramRegexp } from './utils';
 import getRoute from './getRoute';
 
+/**
+ * Helper function that interpolates a route with its parameters replaced by values.
+ *
+ * @export
+ * @param {object} routesMap - map of routes
+ * @param {string} path of route in routes map
+ * @param {object} params object with the key as the parameter name and a value
+ * @returns {string} interpolated route with parameters replaced
+ */
 export function buildRoute(routesMap, path, params) {
   checkType('routesMap', routesMap, 'object');
   checkType('path', path, 'string');
@@ -15,6 +24,15 @@ export function buildRoute(routesMap, path, params) {
   return builtRoute;
 }
 
+/**
+ * Helper function that interpolates a route with its parameters replaced by values.
+ *
+ * @export
+ * @param {object} routesMap - map of routes
+ * @param {string} path of route in routes map
+ * @param {object} options object with shape { params, search, hash }
+ * @returns {string} interpolated route with parameters replaced and optionally search string and/or hash appended
+ */
 export function buildRouteWithOptions(routesMap, path, options) {
   checkType('routesMap', routesMap, 'object');
   checkType('path', path, 'string');
