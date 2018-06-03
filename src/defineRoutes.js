@@ -25,5 +25,3 @@ export default function defineRoutes(routesMap, routesObject) {
 
   return routes;
 }
-
-window.defineRoutes = defineRoutes;
