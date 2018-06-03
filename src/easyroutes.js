@@ -1,6 +1,7 @@
 import defineRoutes from './defineRoutes';
 import getRoute from './getRoute';
 import { buildRoute, buildRouteWithOptions } from './buildRoute';
+import { checkParamsForMissingValues, paramRegexp } from './utils';
 
 /**
  * Core function for the easyroutes package.
@@ -21,7 +22,9 @@ function easyRoutes(...args) {
   } else if (args.length === 1 && typeof args[0] === 'string') {
     // 1 argument - string - get path
     const [path] = args;
-    return getRoute(this.routes, path);
+    const route = getRoute(this.routes, path);
+    checkParamsForMissingValues(route.match(paramRegexp));
+    return route;
   } else if (args.length === 2 && typeof args[0] === 'string' && typeof args[1] === 'object') {
     // 2 arguments - string & object
     if ('params' in args[1] || 'search' in args[1] || 'hash' in args[1]) {

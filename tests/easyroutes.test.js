@@ -47,13 +47,16 @@ describe('#EasyRoutes', () => {
     });
   });
 
-  describe('#get route name raw', () => {
-    it('should interpolate the raw route given the path', () => {
-      expect(easy('user.post')).toEqual('/user/:userid/post/:postid');
+  describe('#get route name', () => {
+    it('should throw when there are params that were not replaced with values', () => {
+      const erroneousCall = () => easy('post', {});
+      expect(erroneousCall).toThrowError(/Invalid output/);
     });
-  });
 
-  describe('#get route name with params replaced', () => {
+    it('should interpolate routes only with name when they need no params', () => {
+      expect(easy('posts')).toEqual('/posts');
+    });
+
     it('should interpolate the route given the path and params', () => {
       expect(easy('user.posts', { userid: 'dksao20dsaxki' })).toEqual('/user/dksao20dsaxki/posts');
     });
