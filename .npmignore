@@ -1,5 +1,6 @@
 /node_modules/
 .eslintrc.json
+.eslintignore
 .babelrc
 .prettierrc
 webpack.config.js
