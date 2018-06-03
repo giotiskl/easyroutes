@@ -3,3 +3,5 @@
 .babelrc
 .prettierrc
 webpack.config.js
+README.md
+LICENSE
