@@ -1,4 +1,6 @@
 # easyroutes
+ [![Build Status](https://travis-ci.org/giotiskl/easyroutes.svg?branch=master)](https://travis-ci.org/giotiskl/easyroutes)
+
 ## Description
 **easyroutes** is an easy, uncomplicated package that helps you maintain named routes and construct them with parameters, a search string and/or a hash with a straightfoward API. 
 
