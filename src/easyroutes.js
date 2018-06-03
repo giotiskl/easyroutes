@@ -46,10 +46,9 @@ function easyRoutes(...args) {
  * @class EasyRoutes
  */
 export default class EasyRoutes {
-  constructor(routes) {
+  constructor(routes = {}) {
     const router = easyRoutes.bind(this);
-    router.routes = routes || {};
-
+    router(routes);
     return router;
   }
 }
