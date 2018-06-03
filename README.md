@@ -34,7 +34,7 @@ const postsRoutes = new EasyRoutes({
 export default postRoutes;
 ````
 
-### Defining new routes
+#### Defining new routes
 Once you have an easyroutes instance, you can then import it from any other module and add more routes to it.
 Simply invoke it providing an object of routes.
 ````
@@ -49,7 +49,7 @@ postRoutes({
 ````
 This will merge the new routes into the router. Keep in mind that trying to overwrite an old route will result in an exception.
 
-### Interpolating a route
+#### Interpolating a route
 To output a route you simply need to invoke your easyroutes instance with the key to your route.
 ````
 const deletedPostsRoute = postRoutes('deletedPosts'); // will output '/deleted-posts'
@@ -64,7 +64,7 @@ const userPostsRoute = postRoutes('user.posts', {
 ````
 If you don't define values for all parameters, `easyroutes` will throw an exception.
 
-### Adding a search string and/or a hash
+#### Adding a search string and/or a hash
 Sometimes you might need a search string and/or a hash added to your route. In this case you can build a route
 passing in an object of options as follows.
 ````
