@@ -20,11 +20,11 @@ function easyRoutes(...args) {
     if ('params' in args[1] || 'search' in args[1] || 'hash' in args[1]) {
       // User is calling version with  options
       const [path, options] = args;
-      return buildRouteWithOptions(this.routes, getRoute(this.routes, path), options);
+      return buildRouteWithOptions(this.routes, path, options);
     }
     // User is calling version only with params
     const [path, params] = args;
-    return buildRoute(this.routes, getRoute(this.routes, path), params);
+    return buildRoute(this.routes, path, params);
   }
 
   // Throw by default when an invalid combination of arguments are passed

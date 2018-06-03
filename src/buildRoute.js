@@ -1,9 +1,12 @@
 import { checkType, checkParamsForMissingValues, paramRegexp } from './utils';
+import getRoute from './getRoute';
 
-export function buildRoute(routesMap, route, params) {
+export function buildRoute(routesMap, path, params) {
   checkType('routesMap', routesMap, 'object');
-  checkType('route', route, 'string');
+  checkType('path', path, 'string');
   checkType('params', params, 'object');
+
+  const route = getRoute(routesMap, path);
 
   const builtRoute = Object.keys(params).reduce((acc, param) => acc.replace(`:${param}`, params[param]), route);
 
@@ -12,16 +15,17 @@ export function buildRoute(routesMap, route, params) {
   return builtRoute;
 }
 
-export function buildRouteWithOptions(routesMap, route, options) {
+export function buildRouteWithOptions(routesMap, path, options) {
   checkType('routesMap', routesMap, 'object');
-  checkType('route', route, 'string');
+  checkType('path', path, 'string');
   checkType('options', options, 'object');
 
+  const route = getRoute(routesMap, path);
   let builtRoute = route;
 
   if ('params' in options) {
     // in case the user has defined params, replace them
-    builtRoute = buildRoute(routesMap, route, options.params);
+    builtRoute = buildRoute(routesMap, path, options.params);
   } else {
     // if user did not define params, but defined search and/or hash
     // then check the path being built for missing params
