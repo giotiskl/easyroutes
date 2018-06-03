@@ -24,8 +24,16 @@
     "search",
     "hash"
   ],
-  "author": "Yiotis Kaltsikis",
+  "author": "Yiotis Kaltsikis <yiotiskal@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/giotiskl/easyroutes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/giotiskl/easyroutes/issues"
+  },
+  "homepage": "https://github.com/giotiskl/easyroutes#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
