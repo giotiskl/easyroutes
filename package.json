@@ -1,5 +1,5 @@
 {
-  "name": "easyroutes",
+  "name": "@yiotis/easyroutes",
   "version": "1.0.0",
   "description": "Effortless management of named routes for JavaScript applications",
   "main": "dist/main.js",

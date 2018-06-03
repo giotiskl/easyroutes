@@ -17,10 +17,10 @@ Contents:
 
 ### Installing
 With NPM:
-````npm install --save easyroutes````
+````npm install --save @yiotis/easyroutes````
 
 With Yarn:
-````yarn add easyroutes````
+````yarn add @yiotis/easyroutes````
 
 ### Usage
 #### Instantiate a routes map
