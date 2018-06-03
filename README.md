@@ -28,6 +28,8 @@ Let's imagine that we need to define routes for a module named `posts`, resembli
 We start by creating an easyroutes instance. Which we can then export, to reuse later.
 
 ````
+import EasyRoutes from '@yiotis/easyroutes';
+
 const postsRoutes = new EasyRoutes({
   newPost: '/post/new',
   post: '/post/:id',
