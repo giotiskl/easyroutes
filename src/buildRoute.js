@@ -39,7 +39,7 @@ export function buildRouteWithOptions(routesMap, route, options) {
         const searchPart = `${key}${valueNotNil && `=${value}`}&`;
         return acc + searchPart;
       }, '?');
-      builtRoute += searchString;
+      builtRoute += searchString.slice(0, searchString.length - 1);
     } else {
       // if it has another type throw
       throw new Error(
