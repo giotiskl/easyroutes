@@ -1,10 +1,8 @@
+import { checkType } from './utils';
+
 export default function getRoute(routesMap, path) {
-  if (typeof routesMap !== 'object') {
-    throw new Error(`easyroutes: Invalid argument, routesMap must be an object but was ${typeof routesMap}.`);
-  }
-  if (typeof path !== 'string') {
-    throw new Error(`easyroutes: Invalid argument, path must be a string but was ${typeof path}.`);
-  }
+  checkType('routesMap', routesMap, 'object');
+  checkType('path', path, 'string');
 
   const splitPath = path.split('.');
 
