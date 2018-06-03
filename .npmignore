@@ -3,6 +3,7 @@
 .eslintignore
 .babelrc
 .prettierrc
+.travis.yml
 webpack.config.js
 README.md
 LICENSE
